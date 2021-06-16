@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := jasmine_sprout
+PRODUCT_RELEASE_NAME := cannon-q-oss
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -37,7 +37,7 @@ AB_OTA_PARTITIONS += \
     vendor
 
 PRODUCT_PACKAGES += \
-    bootctrl.sdm660
+    bootctrl.MT6853
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sdm660 \
+    bootctrl.MT6853 \
     libgptutils \
     libz \
     libcutils
@@ -66,12 +66,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2025-12-31
 
 # Device identifier. This must come after all inclusions
-PRODUCT_PLATFORM := SDM660
-PRODUCT_NAME := omni_jasmine_sprout
-PRODUCT_DEVICE := jasmine_sprout
+PRODUCT_PLATFORM := MT6853V/TNZA
+PRODUCT_NAME := omni_cannon-q-oss
+PRODUCT_DEVICE := cannon
 PRODUCT_BRAND := xiaomi
-PRODUCT_MODEL := Mi A2
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MODEL := Redmi Note 9
+PRODUCT_MANUFACTURER := Redmi
 
 # add support for future ota updates
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -80,14 +80,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.allow.mock.location=0
     
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="jasmine_sprout" \
-    PRODUCT_NAME="jasmine" \
-    PRIVATE_BUILD_DESC="jasmine-user 9 PKQ1.180904.001 V10.0.10.0.PDIMIXM release-keys"
+    TARGET_DEVICE="cannon-q-oss" \
+    PRODUCT_NAME="cannon" \
+    PRIVATE_BUILD_DESC="cannon-user 11 /RP1A.200720.011 21.6.9 release-keys"
 	
 TARGET_VENDOR_PRODUCT_NAME := jasmine
 
-BUILD_FINGERPRINT := "xiaomi/jasmine/jasmine_sprout:9/PKQ1.180904.001/V10.0.10.0.PDIMIXM:user/release-keys"
+BUILD_FINGERPRINT := "Redmi/cannon/cannon:11/RP1A.200720.011/21.6.9:user/release-keys"
 
 # Maintainer Prop
 PRODUCT_BUILD_PROP_OVERRIDES += \
-DEVICE_MAINTAINERS="Manish4586"
+DEVICE_MAINTAINERS="LimChow"
